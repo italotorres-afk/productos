@@ -6,31 +6,36 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #222;
+    background: #f2f5f9;
+    color: #333;
 }
 
-/* MENU */
+
+/* ===== MENÚ ===== */
 
 header {
-    background: #101827;
-    height: 75px;
+    background: #123b7a;
+    padding: 20px 60px;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 8%;
+    align-items: center;
 }
 
 .logo {
-    color: #38bdf8;
+    color: white;
     font-size: 28px;
     font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-weight: bold;
 }
 
@@ -38,232 +43,188 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* INICIO */
 
-.inicio {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e40af,
-        #0284c7
-    );
-
-    color: white;
-}
-
-.inicio h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.inicio span {
-    color: #38bdf8;
-}
-
-.inicio p {
-    font-size: 21px;
-    margin-bottom: 30px;
-}
-
-/* BOTONES */
-
-.boton {
-    display: inline-block;
-    background: #38bdf8;
-    color: #07111f;
-    padding: 13px 25px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.boton:hover {
-    background: white;
-}
-
-/* PAGINAS */
+/* ===== PÁGINA ===== */
 
 .pagina {
-    min-height: 80vh;
-    padding: 70px 8%;
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
 }
 
-.pagina > h1 {
+.pagina h1 {
     text-align: center;
-    font-size: 40px;
-    color: #1e3a8a;
-    margin-bottom: 45px;
+    color: #123b7a;
+    font-size: 36px;
+    margin-bottom: 40px;
 }
 
-/* NOSOTROS */
 
-.contenido {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #0002;
-}
-
-.contenido h2 {
-    color: #0284c7;
-    margin-bottom: 12px;
-}
-
-.contenido p {
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-/* PRODUCTOS */
+/* ===== CUADRÍCULA ===== */
 
 .productos {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
+
+    align-items: stretch;
 }
+
+
+/* ===== TARJETAS ===== */
 
 .producto {
     background: white;
-    padding: 30px 20px;
-    text-align: center;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px #0002;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 }
 
-.producto:hover {
-    transform: translateY(-5px);
-}
 
-.icono {
-    font-size: 60px;
+/* ===== ESPACIO DE IMAGEN ===== */
+
+.imagen-producto {
+    width: 100%;
+    height: 190px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin-bottom: 15px;
 }
 
+
+/* ===== IMAGEN ===== */
+
+.imagen-producto img {
+    max-width: 100%;
+    max-height: 180px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ===== NOMBRE ===== */
+
 .producto h2 {
-    color: #1e3a8a;
+    color: #123b7a;
+
+    font-size: 23px;
+
     margin-bottom: 12px;
 }
 
+
+/* ===== DESCRIPCIÓN ===== */
+
 .producto p {
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.producto strong {
-    color: #0284c7;
-    font-size: 25px;
-}
-
-/* CONTACTO */
-
-.contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.info {
-    background: #101827;
-    color: white;
-    padding: 40px;
-    border-radius: 15px;
-}
-
-.info h2 {
-    color: #38bdf8;
-    margin-bottom: 25px;
-}
-
-.info p {
-    margin: 20px 0;
-}
-
-form {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #0002;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
     font-size: 15px;
+
+    line-height: 1.5;
+
+    min-height: 70px;
+
+    margin-bottom: 15px;
 }
 
-textarea {
-    height: 130px;
+
+/* ===== PRECIO ===== */
+
+.producto h3 {
+    color: #0984d1;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
 }
 
-button {
-    width: 100%;
-    padding: 14px;
-    background: #1e3a8a;
-    color: white;
-    border: none;
+
+/* ===== BOTÓN ===== */
+
+.boton {
+    background: #29abe2;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 12px 28px;
+
     border-radius: 7px;
+
     font-weight: bold;
-    cursor: pointer;
+
+    margin-top: auto;
 }
 
-button:hover {
-    background: #0284c7;
+.boton:hover {
+    background: #123b7a;
+
+    color: white;
 }
 
-/* FOOTER */
+
+/* ===== PIE DE PÁGINA ===== */
 
 footer {
-    background: #0f172a;
+    background: #123b7a;
+
     color: white;
+
     text-align: center;
+
     padding: 25px;
+
+    margin-top: 50px;
 }
 
-/* CELULAR */
 
-@media (max-width: 900px) {
+/* ===== TABLET ===== */
+
+@media (max-width: 1000px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ===== CELULAR ===== */
+
+@media (max-width: 600px) {
 
     header {
-        height: auto;
-        padding: 20px;
         flex-direction: column;
         gap: 20px;
     }
 
-    nav a {
-        margin: 0 7px;
-        font-size: 14px;
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
-
-    .inicio h1 {
-        font-size: 38px;
-    }
-
-    .productos {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contacto {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
 
     .productos {
         grid-template-columns: 1fr;
     }
+
 }
